@@ -8,7 +8,7 @@ Author: [Nuno Albuquerque](http://www.nainteractive.com)
 
 ###Description###
 
-By default, EE does not support renaming of tabs. This is an issue if you have complicated publish layouts since you'd have to essentially reproduce your efforts every time you needed to change a tab name.
+By default, EE does not support renaming of tabs in the publish entry screen. This is an issue if you have complicated publish layouts since you'd have to essentially reproduce your efforts every time you needed to change a tab name.
 
 This little accessory finally allows renaming of tabs in publish entry screens! Simply double click the tab name while editing your publish layout and the label becomes editable.
 
