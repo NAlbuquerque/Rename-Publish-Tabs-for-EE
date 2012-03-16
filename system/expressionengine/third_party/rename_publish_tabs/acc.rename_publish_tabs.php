@@ -8,6 +8,8 @@
  * @description	Enables renaming of tabs in publish entry screens.
  * @author		Nuno Albuquerque
  * @link		http://www.nainteractive.com/notebook/rename_publish_tabs_for_expressionengine
+ * @copyright           Copyright (c) 2012 Nuno Albuquerque
+ * @license             http://creativecommons.org/licenses/by-nc-sa/3.0/
  */
  
 
