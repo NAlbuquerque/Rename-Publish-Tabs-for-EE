@@ -3,7 +3,7 @@ Author: [Nuno Albuquerque](http://www.nainteractive.com)
 
 ##For ExpressionEngine 2.x##
 
-###Version 1.0###
+###Version 1.0.1###
 * Requires: ExpressionEngine 2.1.0
 
 ###Description###
@@ -15,6 +15,7 @@ This little accessory finally allows renaming of tabs in publish entry screens! 
 ###Installation###
 1. Move the rename_publish_tabs folder to your ./system/expressionengine/third_party/ folder.
 2. Enable the accessory from the Add-ons > Accessories menu.
+3. (Optional) Enable the accessory only in the Content page by editing the accessory settings. Even though the accessory will only run on the content publish screens by default, this extra step will prevent EE from even acknowledging it on other pages.
 
 ### Usage ###
 1. Go to any publish entry page and click 'Show Toolbar' to edit your publish layout.

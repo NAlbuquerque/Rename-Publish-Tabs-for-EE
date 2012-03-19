@@ -3,13 +3,13 @@
 /**
  * ExpressionEngine Rename Publish Tabs Accessory
  *
- * @package		Rename Publish Tabs
- * @category	Accessory
- * @description	Enables renaming of tabs in publish entry screens.
- * @author		Nuno Albuquerque
- * @link		http://www.nainteractive.com/notebook/rename_publish_tabs_for_expressionengine
- * @copyright           Copyright (c) 2012 Nuno Albuquerque
- * @license             http://creativecommons.org/licenses/by-nc-sa/3.0/
+ * @package			Rename Publish Tabs
+ * @category		Accessory
+ * @description		Enables renaming of tabs in publish entry screens.
+ * @author			Nuno Albuquerque
+ * @link			http://www.nainteractive.com/notebook/rename_publish_tabs_for_expressionengine
+ * @copyright		Copyright (c) 2012 Nuno Albuquerque
+ * @license			http://creativecommons.org/licenses/by-sa/3.0/
  */
  
 
@@ -17,7 +17,7 @@ class Rename_publish_tabs_acc {
 
 	var $name		= 'Rename Publish Tabs';
 	var $id			= 'rename_publish_tabs';
-	var $version		= '1.0';
+	var $version		= '1.0.1';
 	var $description	= 'Enables renaming of tabs in publish entry screens.';
 	var $sections		= array();
 	
@@ -45,9 +45,8 @@ class Rename_publish_tabs_acc {
 
 		if($_GET['C'] == 'content_publish')
 		{
-			$this->EE->cp->add_to_head('<style>	#mainContent .tab_menu li a.rename_publish_tabs_active{color: #E11842;outline: 1px dotted #E11842; -moz-user-select: text;
-            -webkit-user-select: text; user-select: text;}</style>');
-			$this->EE->load->library('javascript');
+			$this->EE->cp->add_to_head('<style>	#mainContent .tab_menu li a.rename_publish_tabs_active{color: #E11842;outline: 1px dotted #E11842; -moz-user-select: text; -webkit-user-select: text; user-select: text;}</style>');
+			
 			$this->EE->cp->load_package_js('rename_publish_tabs');
 		}
 	}
