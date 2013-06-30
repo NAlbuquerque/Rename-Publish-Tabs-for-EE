@@ -43,7 +43,7 @@ class Rename_publish_tabs_acc {
 	  
 		$this->EE->javascript->output('$(".rename_publish_tabs").parent().hide();');
 
-		if($_GET['C'] == 'content_publish')
+		if(isset($_GET['C']) && $_GET['C'] == 'content_publish')
 		{
 			$this->EE->cp->add_to_head('<style>	#mainContent .tab_menu li a.rename_publish_tabs_active{color: #E11842;outline: 1px dotted #E11842; -moz-user-select: text; -webkit-user-select: text; user-select: text;}</style>');
 			
