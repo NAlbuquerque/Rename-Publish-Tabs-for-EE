@@ -11,16 +11,16 @@
  * @copyright		Copyright (c) 2012 Nuno Albuquerque
  * @license			http://creativecommons.org/licenses/by-sa/3.0/
  */
- 
+
 
 class Rename_publish_tabs_acc {
 
 	var $name		= 'Rename Publish Tabs';
 	var $id			= 'rename_publish_tabs';
-	var $version		= '1.0.1';
+	var $version		= '1.0.2';
 	var $description	= 'Enables renaming of tabs in publish entry screens.';
 	var $sections		= array();
-	
+
 	/**
 	 * Constructor
 	 */
@@ -28,7 +28,7 @@ class Rename_publish_tabs_acc {
 	{
 		$this->EE =& get_instance();
 	}
-	
+
 	/**
 	 * Set Sections
 	 *
@@ -39,17 +39,17 @@ class Rename_publish_tabs_acc {
 	 */
 	function set_sections()
 	{
+		// If we're not in the content publish form, bail out
+		if($this->EE->router->fetch_class() != 'content_publish') return;
+
 		$this->EE->load->library('javascript');
-	  
+
 		$this->EE->javascript->output('$(".rename_publish_tabs").parent().hide();');
 
-		if($_GET['C'] == 'content_publish')
-		{
-			$this->EE->cp->add_to_head('<style>	#mainContent .tab_menu li a.rename_publish_tabs_active{color: #E11842;outline: 1px dotted #E11842; -moz-user-select: text; -webkit-user-select: text; user-select: text;}</style>');
-			
-			$this->EE->cp->load_package_js('rename_publish_tabs');
-		}
+		$this->EE->cp->add_to_foot('<style>	#mainContent .tab_menu li a.rename_publish_tabs_active{color: #E11842;outline: 1px dotted #E11842; -moz-user-select: text; -webkit-user-select: text; user-select: text;}</style>');
+
+		$this->EE->cp->load_package_js('rename_publish_tabs');
 	}
-	
+
 }
 // END CLASS

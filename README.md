@@ -3,7 +3,7 @@ Author: [Nuno Albuquerque](http://www.nainteractive.com)
 
 ##For ExpressionEngine 2.x##
 
-###Version 1.0.1###
+###Version 1.0.2###
 * Requires: ExpressionEngine 2.1.0
 
 ###Description###
@@ -19,6 +19,13 @@ This little accessory finally allows renaming of tabs in publish entry screens! 
 
 ### Usage ###
 1. Go to any publish entry page and click 'Show Toolbar' to edit your publish layout.
-3. Double click the Tab label to enter edit mode. 
+3. Double click the Tab label to enter edit mode.
 4. Press enter or click anywhere on the screen to exit edit mode.
 5. Save your Publish Layout.
+
+
+###Release Notes###
+1.0.2	(2013-07-01)
+- Improved uri class name detection
+- Moved JS to footer
+- Improved performance, now only adds js to publish page
