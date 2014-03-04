@@ -1,11 +1,16 @@
-"use strict";
 
-$(document).ready(function(){
-
+(function ($, window, undefined){
+	"use strict";
+	
+	// Hide accessory tab in CP footer
+	$(".rename_publish_tabs").parent().hide();
+	
+	// Event binding
 	$("#showToolbarLink a").mousedown(function(){
 		if($('#tools:hidden').length > 0)
 		{
 			$('#tab_menu_tabs > li.content_tab').bind('dblclick', renameTabBegin);
+
 		}else
 		{
 			$('#tab_menu_tabs > li.content_tab').unbind('dblclick', renameTabBegin);
@@ -15,6 +20,7 @@ $(document).ready(function(){
 
 	function renameTabBegin(evt)
 	{
+
 		// cache the tab element we're working with and some properties
 		var editing_tab = $(evt.target);
 		var orig_id = editing_tab.parent().attr('id').replace('menu_', '');
@@ -105,20 +111,20 @@ $(document).ready(function(){
 		if(o == n) return false;
 
 		if(n == "") {
-			$.ee_notice(EE.lang.tab_name_required);
+			$.ee_notice(EE.lang.tab_name_required, {open:true});
 			return false;
 		}
 
 		// contains valid characters
 		if(/^[a-zA-Z0-9 _-]+$/.test(n) == false) {
-			$.ee_notice(EE.lang.illegal_characters);
+			$.ee_notice(EE.lang.illegal_characters, {open:true});
 			return false;
 		}
 
 		// is a duplicate label
 		if($("#tab_menu_tabs").find("#menu_"+normalizeId(n)).length > 0)
 		{
-			$.ee_notice(EE.lang.duplicate_tab_name)
+			$.ee_notice(EE.lang.duplicate_tab_name, {open:true})
 			return false;
 		}
 
@@ -134,4 +140,4 @@ $(document).ready(function(){
 		return id_str.replace(/ /g,"_").toLowerCase();
 	}
 
-});
+})(jQuery, window, undefined);
