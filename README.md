@@ -3,8 +3,8 @@ Author: [Nuno Albuquerque](http://www.nainteractive.com)
 
 ##For ExpressionEngine 2.x##
 
-###Version 1.0.2###
-* Requires: ExpressionEngine 2.1.0
+###Version 1.0.3###
+* Requires: ExpressionEngine 2.4.x
 
 ###Description###
 
