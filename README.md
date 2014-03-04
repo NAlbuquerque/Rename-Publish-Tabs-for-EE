@@ -25,6 +25,9 @@ This little accessory finally allows renaming of tabs in publish entry screens! 
 
 
 ###Release Notes###
+1.0.3	(2014-03-04)
+- Improved user error notices when invalid tab names are entered
+
 1.0.2	(2013-07-01)
 - Improved uri class name detection
 - Moved JS to footer
