@@ -17,7 +17,7 @@ class Rename_publish_tabs_acc {
 
 	var $name		= 'Rename Publish Tabs';
 	var $id			= 'rename_publish_tabs';
-	var $version		= '1.0.2';
+	var $version		= '1.0.3';
 	var $description	= 'Enables renaming of tabs in publish entry screens.';
 	var $sections		= array();
 
